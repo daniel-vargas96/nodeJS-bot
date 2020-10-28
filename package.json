@@ -1,0 +1,23 @@
+{
+  "name": "nodeJS-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-vargas96/nodeJS-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-vargas96/nodeJS-bot/issues"
+  },
+  "homepage": "https://github.com/daniel-vargas96/nodeJS-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}

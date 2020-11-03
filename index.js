@@ -2,8 +2,10 @@
 const Discord = require('discord.js');
 const Canvas = require('canvas');
 const config = require("./config.json");
+// const fonts = require('google-fonts');
 // const Jimp = require("jimp");
 // const permanentMarker = require("fontsource-permanent-marker");
+const GetGoogleFonts = require('get-google-fonts');
 
 const client = new Discord.Client();
 
@@ -16,13 +18,14 @@ const applyText = (canvas, text) => {
   let fontSize = 70;
 
   do {
+
     ctx.font = `${fontSize -= 10}px sans-serif`;
   } while (ctx.measureText(text).width > canvas.width - 300);
 
   return ctx.font;
 };
 
-
+new GetGoogleFonts().download('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap')
 
 const prefix = "!";
 
@@ -45,7 +48,7 @@ client.on("message", async message => {
     ctx.strokeStyle = '#74037b';
     ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-    ctx.font = '80px sans-serif';
+    ctx.font = '80px Permanent Marker';
     ctx.fillStyle = '#000';
     ctx.fillText(`${args}`, canvas.width / 4, canvas.height / 1.4);
 

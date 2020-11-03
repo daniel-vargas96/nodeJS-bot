@@ -25,6 +25,7 @@
     "fontsource-open-sans": "^3.0.9",
     "fontsource-permanent-marker": "^3.0.9",
     "get-google-fonts": "^1.2.2",
+    "google-fonts": "^1.0.0",
     "image-size": "^0.9.3",
     "jimp": "^0.16.1",
     "typeface-permanent-marker": "^1.1.13",

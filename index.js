@@ -2,12 +2,17 @@
 const Discord = require('discord.js');
 const Canvas = require('canvas');
 const config = require("./config.json");
-// const fonts = require('google-fonts');
-// const Jimp = require("jimp");
-
-// const permanentMarker = require("./fonts/fonts.css");
+const http = require('http');
 
 const client = new Discord.Client();
+
+http.createServer((req, res) => {
+  res.writeHead(200, {
+    'Content-type': 'text/plain'
+  });
+  res.write('Hey');
+  res.end();
+}).listen(4000);
 
 process.on('unhandledRejection', error => {
   console.error('Unhandled promise rejection:', error);
